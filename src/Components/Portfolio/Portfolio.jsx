@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import './Portfolio.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -7,12 +7,17 @@ import MemoryCard from '../../images/memoryCard.png'
 import Weather from '../../images/weatherApp.png'
 import Calculator from '../../images/calculator.png'
 import CVMaker from '../../images/cvMaker.png'
+import { themeContext } from '../../Context'
+
 
 export default function Portfolio() {
+const theme = useContext(themeContext)
+const darkMode = theme.state.darkMode
+
   return (
     <div className='portfolio'>
       <span>Recent Projects</span>
-      <span>Portfolio</span>
+      <span style={darkMode? {color: 'var(--nightPurple)'}: {}}>Portfolio</span>
 
       {/* Slider */}
       <Swiper className='portfolio-slider' spaceBetween={5} slidesPerView={4} grabCursor={true}>

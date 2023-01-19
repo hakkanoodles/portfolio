@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Services.css'
 import Glasses from '../../images/glasses.png'
 import Heart from '../../images/heartemoji.png'
 import Cards from '../Cards/Cards'
 import resume from './Rohit_Prakash Resume.pdf'
+import { themeContext } from '../../Context'
 
 export default function Services() {
+    const theme = useContext(themeContext);
+    const darkMode = theme.state.darkMode;
+
     return (
         <div className='services'>
-            <div className="awesome-txt">
+            <div className={`awesome-txt ${darkMode? 'txt-dark' : 'txt-light'}`}>
                 <span>My awesome</span>
                 <span>Services</span>
                 <span>
@@ -17,7 +21,7 @@ export default function Services() {
                     magni provident unde doloribus dignissimos itaque quia neque tempore.
                 </span>
                 <a href={resume} download>
-                    <button className="button s-button">Download CV</button>
+                    <button className={`button s-button ${darkMode? 'button-dark' : 'button-light'}`}>Download CV</button>
                 </a>
                 <div className="blur s-blur1"></div>
             </div>

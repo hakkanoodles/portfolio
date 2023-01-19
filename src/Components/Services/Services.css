@@ -1,7 +1,7 @@
 .services {
     padding: 0 3rem 0 3rem;
     display: flex;
-    height: 90vh;
+    height: 80vh;
 }
 
 .awesome-txt {
@@ -12,15 +12,18 @@
 .awesome-txt>:nth-child(1) {
     font-size: 2.5rem;
     font-weight: bold;
-    color: var(--black);
 }
 
 .awesome-txt>:nth-child(2) {
     font-size: 2.5rem;
     font-weight: bold;
+}
+.txt-light>:nth-child(2){
     color: var(--orange);
 }
-
+.txt-dark>:nth-child(2){
+    color: var(--nightPurple);
+}
 .awesome-txt>:nth-child(3) {
     font-size: .8rem;
     font-weight: 100;

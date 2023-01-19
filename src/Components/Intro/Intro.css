@@ -18,15 +18,22 @@
 }
 
 .i-name>:nth-child(1) {
-    color: var(--black);
     font-weight: bold;
     font-size: 3rem;
 }
 
+
 .i-name>:nth-child(2) {
-    color: var(--orange);
     font-weight: bold;
     font-size: 3rem;
+}
+
+.i-n-light>:nth-child(2) {
+    color: var(--orange);
+}
+
+.i-n-dark>:nth-child(2) {
+    color: var(--nightPurple);
 }
 
 .i-name>:nth-child(3) {
@@ -42,20 +49,23 @@
 }
 
 .i-icon {
-    margin-top: 3rem;
+    position: absolute;
+    top: 18rem;
+    left: 1rem;
     display: flex;
-    gap: 0rem;
+    justify-items: center;
+    align-items: center;
+    gap: 3rem;
 }
 
 .i-icon>* {
-    transform: scale(0.5);
+    transform: scale(2.5);
     transition: ease-in-out 300ms;
 }
 
 .i-icon>*:hover {
-    transform: scale(0.53);
+    transform: scale(2.3);
     cursor: pointer;
-    mix-blend-mode: multiply;
 }
 
 .i-right {
@@ -67,26 +77,33 @@
     position: absolute;
     z-index: 1;
 }
-
 .i-right>:nth-child(1) {
-    transform: scale(.9);
-    left: -6%;
-    top: -12%;
-}
-
-.i-right>:nth-child(2) {
     transform: scale(0.79);
     left: -2rem;
     top: -5.6rem;
 }
 
+.i-right>:nth-child(2) {
+    transform: scale(.45);
+    left: -45%;
+    top: -55%;
+}
+
 .i-right>:nth-child(3) {
+    transform: scale(0.79);
+    left: -2rem;
+    top: -5.6rem;
+}
+.i-r-dark>:nth-child(3){
+    z-index: -1;
+}
+
+.i-right>:nth-child(4) {
     transform: scale(1.4);
     left: 28%;
 }
 
-.i-right>:nth-child(4) {
-    transform: scale(0.6);
+.i-right>:nth-child(5) {
     top: -6%;
     left: -24%;
     border-radius: 50%;

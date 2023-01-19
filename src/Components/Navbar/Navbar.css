@@ -40,11 +40,17 @@
 
 .nav-list>ul>li:hover {
     cursor: pointer;
+}
+
+.nav-l-light>ul>li:hover {
     color: var(--orange);
+}
+
+.nav-l-dark>ul>li:hover {
+    color: var(--nightPurple);
 }
 
 .nav-button {
     margin-left: .5rem;
     margin-right: .5rem;
 }
-
