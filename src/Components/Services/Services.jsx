@@ -1,46 +1,60 @@
 import React, { useContext } from 'react'
 import './Services.css'
-import Glasses from '../../images/glasses.png'
-import Heart from '../../images/heartemoji.png'
+import Program from '../../images/Program.png'
+import Design from '../../images/Design.png'
 import Cards from '../Cards/Cards'
 import resume from './Rohit_Prakash Resume.pdf'
 import { themeContext } from '../../Context'
+import { motion } from 'framer-motion'
+
 
 export default function Services() {
     const theme = useContext(themeContext);
     const darkMode = theme.state.darkMode;
 
     return (
-        <div className='services'>
-            <div className={`awesome-txt ${darkMode? 'txt-dark' : 'txt-light'}`}>
+        <div className='services' id='Services'>
+            <div className={`awesome-txt ${darkMode ? 'txt-dark' : 'txt-light'}`}>
                 <span>My awesome</span>
                 <span>Services</span>
                 <span>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem, fugit explicabo
+                    Front-end programs proficiency : HTML , CSS , JavaScript and ReactJs
                     <br />
-                    magni provident unde doloribus dignissimos itaque quia neque tempore.
+                    Back-end programs proficiency : NodeJs and MongoDB
+                    <br />
+                    Framework and Library proficiency : Bootstrap , Tailwind, Mongoose and ExpressJs
+                    <br />
+                    Design Tools : Photoshop, Illustrator and Figma.
                 </span>
                 <a href={resume} download>
-                    <button className={`button s-button ${darkMode? 'button-dark' : 'button-light'}`}>Download CV</button>
+                    <button className={`button s-button ${darkMode ? 'button-dark' : 'button-light'}`}>Download CV</button>
                 </a>
                 <div className="blur s-blur1"></div>
             </div>
 
             <div className="s-cards">
-                <div style={{ left: '30rem' }}>
+                <motion.div
+                    initial={{ x: -40 }}
+                    whileInView={{ x: 0 }}
+                    transition={{ type: 'spring', stiffness: 200 }}
+                >
                     <Cards
-                        emoji={Glasses}
+                        emoji={Program}
                         heading='Programs'
                         details='Html, Css3, Javascript, React, Node'
                     />
-                </div>
-                <div style={{ left: '5rem', top: '13rem' }}>
+                </motion.div>
+                <motion.div
+                    initial={{ x: 40 }}
+                    whileInView={{ x: 0 }}
+                    transition={{ type: 'spring', stiffness: 200 }}
+                >
                     <Cards
-                        emoji={Heart}
+                        emoji={Design}
                         heading='Design'
                         details='Photoshop, Figma, Illustrator'
                     />
-                </div>
+                </motion.div>
 
             </div>
 

@@ -27,7 +27,7 @@ export default function ContactMe() {
             });
     };
     return (
-        <div className='contact'>
+        <div className='contact' id='Contact'>
             <div className="c-left">
                 <span>Get in Touch</span>
                 <span style={darkMode ? {color: 'var(--nightPurple)'}:{}}>Contact Me </span>

@@ -1,55 +1,61 @@
-import React, { useContext } from 'react'
+import React, { useContext,useState } from 'react'
 import './Intro.css'
 import Github from '@iconscout/react-unicons/icons/uil-github'
 import LinkedIn from '@iconscout/react-unicons/icons/uil-linkedin'
-import YellowBlob from '../../images/Vector2.png'
-import BlueBlob from '../../images/Vector1.png'
-import Boy from '../../images/boy.png'
 import Thumbsup from '../../images/thumbup.png'
 import Crown from '../../images/crown.png'
-import glassEmoji from '../../images/glassesimoji.png'
 import FloatingDiv from '../FloatingDiv/FloatingDiv'
 import { themeContext } from '../../Context'
-import { motion } from 'framer-motion'
+import { motion} from 'framer-motion'
+import CoolAnimation from '../CoolAnimation/CoolAnimation'
 
 
 export default function Intro() {
     const theme = useContext(themeContext)
     const darkMode = theme.state.darkMode;
 
+    const [rotate, setRotate] = useState(false)
+
     return (
-        <div className='i-wrapper'>
+        <div className='i-wrapper' id='Intro'>
             <div className="i-left">
                 <div className={`i-name ${darkMode ? 'i-n-dark' : 'i-n-light'} `}>
                     <span>Hi! I Am</span>
                     <span>Rohit Prakash</span>
                     <span>Aspiring Front-end developer, previously worked as Sr. Measuring Tech.</span>
                 </div>
-                <button className={`button 
+                {/* <button className={`button 
                 ${darkMode ? 'button-dark' : 'button-light'}
-                i-button`}>Hire Me</button>
+                i-button`}>Hire Me</button> */}
                 <div className="i-icon">
-                    <Github color={darkMode ? '#A904BF' : '#F2B705'} />
-                    <LinkedIn color={darkMode ? '#A904BF' : '#F2B705'} />
+                    <a href="https://github.com/hakkanoodles">
+                        <Github color={darkMode ? '#A904BF' : '#F2B705'} />
+                    </a>
+                    <a href="https://www.linkedin.com/in/rohit-prakash-7a07491a0">
+                        <LinkedIn color={darkMode ? '#A904BF' : '#F2B705'} />
+                    </a>
                 </div>
             </div>
             <div className={`i-right ${darkMode ? 'i-r-dark' : 'i-r-light'}`}>
-                <img src={YellowBlob} alt="Github" />
-                <img src={BlueBlob} alt="Github" />
-                <img src={YellowBlob} alt="Github" />
-                <img src={Boy} alt="Github" />
-                <motion.img
-                    initial={{ opacity: 0, x: -50, scale: 0.4 }}
+                <motion.div 
+                initial={{scale: 0}}
+                whileInView={{scale:2 }}
+                transition={{duration: 1}}
+                animate={{rotate: rotate? 270: 180 }}
+                onClick ={()=>{
+                    setRotate(!rotate)
+                }}
+                className="animation"
+                >
+                    <CoolAnimation />
+                </motion.div>
 
-                    whileInView={{ opacity: 1, x: 10, scale: 0.5, }}
-                    transition={{ duration: 1, type: 'spring' }}
-                    src={glassEmoji} alt="Github"
-                />
                 <motion.div
-                    style={{ top: '8%', left: '54%' }}
                     initial={{ x: 30, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
+                    transition={{ type: 'spring', stiffness: 200 }}
+                    whileHover={{ scale: 1.1 }}
+                    className='floating-div'
                 >
                     <FloatingDiv
                         image={Crown}
@@ -60,10 +66,11 @@ export default function Intro() {
                     />
                 </motion.div>
                 <motion.div
-                    style={{ top: '51%', left: '6%' }}
-                    initial={{ x: -30, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.5 }}
+                    initial={{ x: 0, opacity: 0 }}
+                    whileInView={{ x: '150%', opacity: 1 }}
+                    transition={{ type: 'spring', stiffness: 200 }}
+                    whileHover={{ scale: 1.1 }}
+                    className='floating-div'
                 >
                     <FloatingDiv
                         image={Thumbsup}

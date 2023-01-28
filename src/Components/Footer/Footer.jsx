@@ -14,8 +14,8 @@ export default function Footer() {
   return (
     <div className='footer'>
       {darkMode ?
-        <img src={wavePurple} alt="" style={{ width: '100%' }} />:
-        <img src={waveYellow} alt="" style={{ width: '100%' }} /> 
+        <img src={wavePurple} alt=""  />:
+        <img src={waveYellow} alt=""  /> 
       }
 
       <div className="f-content">

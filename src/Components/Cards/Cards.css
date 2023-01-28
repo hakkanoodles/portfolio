@@ -22,8 +22,10 @@
 }
 
 .card>img {
+    margin-top: 1rem;
     width: 4rem;
-    aspect-ratio: 1;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 
 .card>span:nth-of-type(2) {

@@ -1,7 +1,7 @@
 .i-wrapper {
     display: flex;
     height: 77vh;
-    margin-top: 5rem;
+    margin-top: 9rem;
 }
 
 .i-left {
@@ -10,6 +10,8 @@
     flex: 1;
     flex-direction: column;
     gap: 2rem;
+    padding: 5rem;
+    box-sizing: border-box;
 }
 
 .i-name {
@@ -50,8 +52,8 @@
 
 .i-icon {
     position: absolute;
-    top: 18rem;
-    left: 1rem;
+    top: 21rem;
+    left: 5.5rem;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -77,16 +79,17 @@
     position: absolute;
     z-index: 1;
 }
-.i-right>:nth-child(1) {
+
+/* .i-right>:nth-child(1) {
     transform: scale(0.79);
     left: -2rem;
     top: -5.6rem;
 }
 
 .i-right>:nth-child(2) {
-    transform: scale(.45);
-    left: -45%;
-    top: -55%;
+    transform: scale(.79);
+    left: -2rem;
+    top: -5.6rem;
 }
 
 .i-right>:nth-child(3) {
@@ -94,12 +97,13 @@
     left: -2rem;
     top: -5.6rem;
 }
-.i-r-dark>:nth-child(3){
-    z-index: -1;
-}
 
-.i-right>:nth-child(4) {
-    transform: scale(1.4);
+.i-r-dark>:nth-child(3) {
+    z-index: -1;
+} */
+
+/* .i-right>:nth-child(4) {
+    transform: scale(1.3);
     left: 28%;
 }
 
@@ -108,6 +112,16 @@
     left: -24%;
     border-radius: 50%;
     padding: 0px;
+} */
+
+.floating-div:nth-of-type(1) {
+    top: 8%;
+    left: 80%;
+}
+
+.floating-div:nth-of-type(2) {
+    top: 54%;
+    left: -13%;
 }
 
 .blur {
@@ -121,11 +135,50 @@
 }
 
 .blur1 {
-    top: -15%;
-    left: 63%;
+    top: -10%;
+    left: 50%;
 }
 
 .blur2 {
-    top: 21%;
-    left: -18%;
+    top: 33%;
+    left: -30%;
+}
+
+.animation{
+    position: absolute;
+    top: 14%;
+    left: 15%;
+}
+
+@media screen and (max-width:480px) {
+    .i-wrapper {
+        margin-top: 2rem;
+        flex-direction: column;
+        gap: 7rem;
+    }
+   
+
+    .i-right {
+        margin-top: 4rem;
+        transform: scale(0.64);
+        left: -5rem;
+    }
+
+    .i-right .blur, .blur2 , .blur1 {
+        display: none;
+    }
+    .i-right>:nth-child(5){
+        display: none;
+    }
+    .floating-div:nth-of-type(1) {
+        top: 2rem;
+        left: 19rem;
+    }
+    .i-icon{
+        top: 17rem;
+    }
+    .floating-div:nth-of-type(2) {
+        top: 18rem;
+        left: 4rem;
+    }
 }

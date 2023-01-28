@@ -65,3 +65,16 @@
     top: 10rem;
     left: 34rem;
 }
+
+@media screen and (max-width:480px){
+    .contact{
+        margin-top: 6rem;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 5rem;
+    }
+    .c-blur{
+        display: none;
+    }
+}

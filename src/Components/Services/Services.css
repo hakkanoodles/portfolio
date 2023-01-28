@@ -1,5 +1,5 @@
 .services {
-    padding: 0 3rem 0 3rem;
+    padding: 5rem 3rem 0 3rem;
     display: flex;
     height: 80vh;
 }
@@ -18,12 +18,15 @@
     font-size: 2.5rem;
     font-weight: bold;
 }
-.txt-light>:nth-child(2){
+
+.txt-light>:nth-child(2) {
     color: var(--orange);
 }
-.txt-dark>:nth-child(2){
+
+.txt-dark>:nth-child(2) {
     color: var(--nightPurple);
 }
+
 .awesome-txt>:nth-child(3) {
     font-size: .8rem;
     font-weight: 100;
@@ -39,6 +42,15 @@
     position: absolute;
 }
 
+.s-cards>div:nth-child(1) {
+    left: 35rem;
+}
+
+.s-cards>div:nth-child(2) {
+    left: 8rem;
+    top: 13rem;
+}
+
 .s-button {
     width: 8rem;
     height: 2rem;
@@ -48,4 +60,25 @@
 .s-blur1 {
     top: 51rem;
     left: 48rem;
+}
+
+@media screen and (max-width:480px) {
+    .services {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10rem;
+        height: 125vh;
+        gap: 3rem;
+    }
+
+    .s-cards {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18rem;
+    }
+    .s-cards>*{
+        position: static;
+    }
 }

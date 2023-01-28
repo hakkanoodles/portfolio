@@ -5,6 +5,9 @@
     position: relative;
 
 }
+.footer>img{
+    width: 100%;
+}
 
 .f-content{
     margin-top: 8rem;
@@ -31,5 +34,15 @@
 }
 .f-light>a:hover{
     filter: drop-shadow(-5px 5px 4px #da911b );
+}
+
+@media screen and (max-width:480px){
+    .footer{
+        margin-top: 3rem;
+    }
+    .footer>img{
+        width: auto;
+        height: 50vh;
+    }
 }
 
