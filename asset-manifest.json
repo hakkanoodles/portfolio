@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.037f8d69.css",
-    "main.js": "/portfolio/static/js/main.846802c9.js",
+    "main.js": "/portfolio/static/js/main.f391fc70.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/weatherApp.png": "/portfolio/static/media/weatherApp.6b22c9fe1f1534c53e6c.png",
     "static/media/Ebuy.png": "/portfolio/static/media/Ebuy.41c3e1b68d4619593dc6.png",
     "static/media/memoryCard.png": "/portfolio/static/media/memoryCard.fe83f3ca2c9d2088198d.png",
-    "static/media/Rohit_Prakash Resume.pdf": "/portfolio/static/media/Rohit_Prakash Resume.a252717f9208ac369d02.pdf",
+    "static/media/Rohit_Prakash Resume.pdf": "/portfolio/static/media/Rohit_Prakash Resume.eb79307618c68a71df87.pdf",
     "static/media/cvMaker.png": "/portfolio/static/media/cvMaker.2cde6052d86f816cd16e.png",
     "static/media/calculator.png": "/portfolio/static/media/calculator.0041a82d20d5cc0880d9.png",
     "static/media/wave2.png": "/portfolio/static/media/wave2.eb7b2fcd9087fa99b859.png",
@@ -16,11 +16,11 @@
     "static/media/crown.png": "/portfolio/static/media/crown.dbe416beae9b49b842ab.png",
     "index.html": "/portfolio/index.html",
     "main.037f8d69.css.map": "/portfolio/static/css/main.037f8d69.css.map",
-    "main.846802c9.js.map": "/portfolio/static/js/main.846802c9.js.map",
+    "main.f391fc70.js.map": "/portfolio/static/js/main.f391fc70.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.037f8d69.css",
-    "static/js/main.846802c9.js"
+    "static/js/main.f391fc70.js"
   ]
 }
