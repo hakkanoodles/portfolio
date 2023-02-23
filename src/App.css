@@ -13,6 +13,17 @@
   --nightPurpleGlow: #d839ed;
   --nightBlue: #3E428C;
 }
+
+@font-face{
+  font-family: Gumela;
+  src: url('../src/fonts/Gumela\ Regular.otf');
+}
+*{
+  font-family: 'Gumela';
+  font-weight: normal;
+  font-size: 20px;
+}
+
 body::-webkit-scrollbar{
   background-color: transparent;
 }
